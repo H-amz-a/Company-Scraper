@@ -1,7 +1,5 @@
 "use strict";
 
-console.log("hello");
-
 import puppeteer from "puppeteer";
 
 // Step 1)
@@ -16,7 +14,7 @@ async function scrapeLinkedinCompany() {
     timeout: 0,
   };
   const optionsTyping = {
-    delay: 50,
+    delay: 150,
   };
   // Wait for necessary details
   await page.goto("https://www.linkedin.com/uas/login", navigationOptions);
@@ -60,9 +58,7 @@ async function scrapeLinkedinCompany() {
         let split = text.replace(",", "").split(" ");
         let num = "";
         split.forEach((word) => {
-          console.log(word);
           const x = word.trim() * 1;
-          console.log(x);
           if (x) {
             num += word;
           }
