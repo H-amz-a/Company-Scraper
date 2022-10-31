@@ -23,5 +23,6 @@
   "homepage": "https://github.com/H-amz-a/recTech#readme",
   "dependencies": {
     "puppeteer": "^19.2.0"
-  }
+  },
+  "type": "module"
 }

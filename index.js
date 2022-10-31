@@ -28,10 +28,8 @@ async function scrapeLinkedinCompany() {
   await page.waitForNavigation(navigationOptions);
 
   // Head to company Page
-  await page.goto(
-    "https://www.linkedin.com/company/mihoyo/?trk=public_profile_experience-item_profile-section-card_image-click&originalSubdomain=ca",
-    navigationOptions
-  );
+  const url = "https://www.linkedin.com/company/ibexpakistan/";
+  await page.goto(url, navigationOptions);
   console.log("page Loaded");
 
   // Open show more
